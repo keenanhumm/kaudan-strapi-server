@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "realms",
+  "info": {
+    "name": "Realm",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "products": {
+      "via": "realms",
+      "collection": "product"
+    }
+  }
+}
